@@ -1,0 +1,23 @@
+#!/bin/sh
+set -ux
+
+
+WHOAMI=$(whoami)
+HOSTNAME=$(hostname)
+
+WINDOW_TITLE="$WHOAMI@$HOSTNAME -- tmux"
+TMUX_WINDOW=$(xdotool search --name "$WINDOW_TITLE")
+
+if [ "$TMUX_WINDOW" = "" ]; then
+    gnome-terminal --geometry=240x50+100+0 --title="$WINDOW_TITLE" -- tmux -f $HOME/.config/tmux/tmux.conf &
+    kill $$
+fi
+
+if [ "$(xdotool getwindowfocus)" = "$TMUX_WINDOW" ]; then
+    ACTION=windowminimize
+else
+    ACTION=windowactivate
+fi
+
+
+exec xdotool $ACTION $TMUX_WINDOW
