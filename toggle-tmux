@@ -9,7 +9,7 @@ WINDOW_TITLE="$WHOAMI@$HOSTNAME -- tmux"
 TMUX_WINDOW=$(xdotool search --name "$WINDOW_TITLE")
 
 if [ "$TMUX_WINDOW" = "" ]; then
-    gnome-terminal --geometry=240x50+100+0 --title="$WINDOW_TITLE" -- tmux -f $HOME/.config/tmux/tmux.conf &
+    gnome-terminal --geometry=240x50+100+0 --title="$WINDOW_TITLE" -- tmux -f $HOME/.tmux/tmux.conf &
     kill $$
 fi
 
