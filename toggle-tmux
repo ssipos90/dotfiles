@@ -1,15 +1,19 @@
 #!/bin/sh
 set -ux
 
-
 WHOAMI=$(whoami)
 HOSTNAME=$(hostname)
 
 WINDOW_TITLE="$WHOAMI@$HOSTNAME -- tmux"
 TMUX_WINDOW=$(xdotool search --name "$WINDOW_TITLE")
 
+TEMULATOR="alacritty --title=\"$WINDOW_TITLE\" -e tmux -f $HOME/.tmux/tmux.conf"
+if [ $(command -v alacritty) = '' ]; then
+    TEMULATOR="gnome-terminal --geometry=240x50+100+0 --title=\"$WINDOW_TITLE\" -- tmux -f $HOME/.tmux/tmux.conf"
+fi
+
 if [ "$TMUX_WINDOW" = "" ]; then
-    gnome-terminal --geometry=240x50+100+0 --title="$WINDOW_TITLE" -- tmux -f $HOME/.tmux/tmux.conf &
+    eval $TEMULATOR &
     kill $$
 fi
 
