@@ -25,4 +25,5 @@ else
 fi
 
 
-exec xdotool $ACTION $TMUX_WINDOW
+exec xdotool $ACTION $TMUX_WINDOW --sync
+
