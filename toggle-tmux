@@ -7,11 +7,7 @@ HOSTNAME=$(hostname)
 WINDOW_TITLE="$WHOAMI@$HOSTNAME -- tmux"
 TMUX_WINDOW=$(xdotool search --name "$WINDOW_TITLE")
 
-TEMULATOR="alacritty --title=\"$WINDOW_TITLE\" -e tmux -f $HOME/.tmux/tmux.conf"
-command -v alacritty2 > /dev/null
-if [ $? -ne 0 ]; then
-    TEMULATOR="gnome-terminal --geometry=240x50+100+0 --title=\"$WINDOW_TITLE\" -- tmux -f $HOME/.tmux/tmux.conf"
-fi
+TEMULATOR="gnome-terminal --geometry=240x50+100+0 --title=\"$WINDOW_TITLE\" -- tmux -f $HOME/.tmux/tmux.conf"
 
 if [ "$TMUX_WINDOW" = "" ]; then
     eval $TEMULATOR &
