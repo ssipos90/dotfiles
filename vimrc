@@ -38,6 +38,8 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
 colorscheme PaperColor
 
 function! PackInit() abort
