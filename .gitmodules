@@ -1,6 +1,6 @@
-[submodule "vimrc"]
-	path = vimrc
-	url = ssipos.go.ro:~/repos/vimrc
 [submodule "tmux"]
 	path = tmux
 	url = ssipos.go.ro:~/repos/tmux
+[submodule "vim"]
+	path = vim
+	url = ssipos.go.ro:repos/vim
