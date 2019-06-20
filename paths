@@ -1,0 +1,24 @@
+LOCAL_BIN="$HOME/.local/bin"
+if [[ -d "${LOCAL_BIN}" ]]; then
+    PATH="${LOCAL_BIN}:${PATH}"
+fi
+
+NPM_BIN=${HOME}/.config/npm/bin
+if [[ -d "${NPM_BIN}" ]]; then
+    PATH="${NPM_BIN}:${PATH}"
+fi
+
+COMPOSER_BIN=${HOME}/.config/composer/vendor/bin
+if [[ -d $COMPOSER_BIN ]]; then
+    PATH="${PATH}:${COMPOSER_BIN}"
+fi
+
+PATH="${PATH}:$HOME/.local/android/tools:$HOME/.local/android/build-tools:$HOME/.local/android/tools/bin:$HOME/.local/gradle/bin"
+
+ANDROID_HOME=$HOME/.local/android/
+
+STACK_ROOT=$HOME/.config/stack/
+
+EDITOR=vim
+VISUAL=vim
+
