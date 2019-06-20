@@ -1,6 +1,7 @@
 [submodule "tmux"]
 	path = tmux
-	url = ssipos.go.ro:~/repos/tmux
+    url = ssipos.go.ro:~/repos/tmux
+    branch = xfce
 [submodule "vim"]
 	path = vim
 	url = ssipos.go.ro:repos/vim
