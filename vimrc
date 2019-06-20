@@ -7,6 +7,10 @@ if has ('autocmd') " Remain compatible with earlier versions
   augroup END
 endif " has autocmd
 
+set guioptions-=m "menu bar
+set guioptions-=T "toolbar
+set guioptions-=r "scrollbar
+
 set nocompatible
 set path+=**
 set viminfo+=n~/.vim/.viminfo
@@ -23,15 +27,19 @@ set hlsearch
 :  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 :augroup END
 
+"hello world"
 "augroup ProjectDrawer
 "    autocmd!
 "    autocmd VimEnter * :Vexplore
 "augroup END
+
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
-let g:netrw_browse_split = 4
+let g:netrw_browse_split = 0
 let g:netrw_altv = 1
 let g:netrw_winsize = 25
+
+let g:hdevtools_stack=1
 
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -52,6 +60,9 @@ function! PackInit() abort
     call minpac#add('vim-airline/vim-airline')
     call minpac#add('tpope/vim-unimpaired')
     call minpac#add('tpope/vim-scriptease', {'type': 'opt'})
+    call minpac#add('w0rp/ale')
+    call minpac#add('bitc/vim-hdevtools')
+    call minpac#add('ConradIrwin/vim-bracketed-paste')
 endfunction
 
 command! PackUpdate call PackInit() | call minpac#update('', {'do': 'call minpac#status()'})
