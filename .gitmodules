@@ -4,4 +4,5 @@
     branch = xfce
 [submodule "vim"]
 	path = vim
-	url = ssipos.go.ro:repos/vim
+    url = ssipos.go.ro:repos/vim
+
