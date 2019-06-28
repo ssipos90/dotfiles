@@ -1,0 +1,38 @@
+(if
+  (matches (window_name) " tmux$")
+(begin
+  (set_workspace 3)
+  (maximize)
+)) 
+
+(if
+  (matches (window_name) "Mozilla Firefox")
+(begin
+  (spawn_sync "sleep 4")
+  (debug)
+  (if
+    (matches (window_name) "^ssipos-personal ")
+  (begin
+    (set_workspace 4)
+    (maximize)
+  ))
+  
+  (if
+    (matches (window_name) "^ssipos-work ")
+  (begin
+    (set_workspace 1)
+    (maximize)
+  ))
+
+
+)) 
+
+(if
+  (matches (window_name) "PhpStorm")
+(begin
+  (set_workspace 2)
+  (maximize)
+)) 
+
+
+
