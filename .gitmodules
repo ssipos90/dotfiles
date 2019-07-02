@@ -6,3 +6,7 @@
     path = vim
     url = ssipos.go.ro:repos/vim
 
+[submodule "oh-my-zsh"]
+	path = oh-my-zsh
+	url = ssipos.go.ro:repos/oh-my-zsh
+	branch = ssipos

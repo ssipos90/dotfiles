@@ -30,6 +30,8 @@ declare -A symlinks=(
   ["tmux"]=".tmux"
   ["vim"]=".vim"
   ["npmrc"]=".npmrc"
+  ["oh-my-zsh"]=".oh-my-zsh"
+  ["Xmodmap"]=".Xmodmap"
 )
 echo "creating dotfile symlinks"
 for symlink in "${!symlinks[@]}"; do
