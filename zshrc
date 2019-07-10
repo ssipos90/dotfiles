@@ -94,3 +94,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ll="ls -laF"
 alias dc="docker-compose"
+
+export ANDROID_HOME="$HOME/.local/android/"
+
