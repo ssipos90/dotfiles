@@ -40,10 +40,10 @@
       <property name="XF86Calculator" type="string" value="galculator"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;t" type="string" value="xfce4-terminal --drop-down"/>
       <property name="&lt;Super&gt;f" type="string" value="xfce4-popup-whiskermenu"/>
-      <property name="&lt;Shift&gt;&lt;Super&gt;f" type="string" value="env GTK2_RC_FILES=/usr/share/themes/Adwaita/gtk-2.0/gtkrc GTK_THEME=Adwaita:light firefox -P work">
+      <property name="&lt;Shift&gt;&lt;Super&gt;f" type="string" value="env GTK_THEME=Adwaita:light firefox -P work">
         <property name="startup-notify" type="bool" value="true"/>
       </property>
-      <property name="&lt;Shift&gt;&lt;Super&gt;p" type="string" value="env GTK2_RC_FILES=/usr/share/themes/Adwaita/gtk-2.0/gtkrc GTK_THEME=Adwaita:light firefox -P personal">
+      <property name="&lt;Shift&gt;&lt;Super&gt;p" type="string" value="env GTK_THEME=Adwaita:light firefox -P personal">
         <property name="startup-notify" type="bool" value="true"/>
       </property>
       <property name="F10" type="empty">

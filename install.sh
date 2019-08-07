@@ -32,14 +32,17 @@ declare -A symlinks=(
   ["npmrc"]=".npmrc"
   ["oh-my-zsh"]=".oh-my-zsh"
   ["Xmodmap"]=".Xmodmap"
+  ["/usr/share/themes/Adwaita/gtk-2.0/"]="gtkrc-2.0"
 )
 echo "creating dotfile symlinks"
-for symlink in "${!symlinks[@]}"; do
-    SYMLINK=$HOME/${symlinks[$symlink]}
+for rpath in "${!symlinks[@]}"; do
+    SYMLINK=$HOME/${symlinks[$rpath]}
     if [[ -e $SYMLINK ]]; then
         echo "Symlink already exists: $SYMLINK" >&2
+    else if [[ $rpath == /* ]]; then
+        ln -s $rpath $symlink
     else
-        ln -s $SCRIPTPATH/$symlink $SYMLINK 
+        ln -s $SCRIPTPATH/$rpath $SYMLINK
     fi
 done
 
