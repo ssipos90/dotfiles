@@ -40,10 +40,10 @@ let g:netrw_browse_split = 0
 let g:netrw_altv = 1
 let g:netrw_winsize = 25
 
-let g:hdevtools_stack=1
 let g:slime_target = "tmux"
 let g:slime_paste_file = tempname()
 
+let g:hdevtools_stack=1
 let g:haskell_enable_quantification = 1   " to enable highlighting of `forall`
 let g:haskell_enable_recursivedo = 1      " to enable highlighting of `mdo` and `rec`
 let g:haskell_enable_arrowsyntax = 1      " to enable highlighting of `proc`
@@ -51,6 +51,8 @@ let g:haskell_enable_pattern_synonyms = 1 " to enable highlighting of `pattern`
 let g:haskell_enable_typeroles = 1        " to enable highlighting of type roles
 let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
 let g:haskell_backpack = 1                " to enable highlighting of backpackkeywords
+
+let g:hindent_on_save = 0
 
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -71,14 +73,14 @@ function! PackInit() abort
     call minpac#add('vim-airline/vim-airline')
     call minpac#add('tpope/vim-unimpaired')
     call minpac#add('jpalardy/vim-slime')
+    call minpac#add('w0rp/ale')
+    call minpac#add('yegappan/mru')
+    call minpac#add('ConradIrwin/vim-bracketed-paste')
+    call minpac#add('neovimhaskell/haskell-vim')
     call minpac#add('alx741/vim-hindent')
     call minpac#add('bitc/vim-hdevtools')
-    call minpac#add('neovimhaskell/haskell-vim')
     call minpac#add('aiya000/vim-ghcid-quickfix')
-    call minpac#add('tpope/vim-scriptease', {'type': 'opt'})
-    call minpac#add('w0rp/ale')
-    call minpac#add('bitc/vim-hdevtools')
-    call minpac#add('ConradIrwin/vim-bracketed-paste')
+    call minpac#add('tpope/vim-scriptease')
 endfunction
 
 command! PackUpdate call PackInit() | call minpac#update('', {'do': 'call minpac#status()'})
