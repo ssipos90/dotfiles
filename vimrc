@@ -77,7 +77,7 @@ function! PackInit() abort
     call minpac#add('yegappan/mru')
     call minpac#add('ConradIrwin/vim-bracketed-paste')
     call minpac#add('neovimhaskell/haskell-vim')
-    call minpac#add('alx741/vim-hindent')
+    "call minpac#add('alx741/vim-hindent')
     call minpac#add('bitc/vim-hdevtools')
     call minpac#add('aiya000/vim-ghcid-quickfix')
     call minpac#add('tpope/vim-scriptease')
