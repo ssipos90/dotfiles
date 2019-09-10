@@ -40,12 +40,6 @@
       <property name="XF86Calculator" type="string" value="galculator"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;t" type="string" value="xfce4-terminal --drop-down"/>
       <property name="&lt;Super&gt;f" type="string" value="xfce4-popup-whiskermenu"/>
-      <property name="&lt;Shift&gt;&lt;Super&gt;f" type="string" value="env GTK_THEME=Adwaita:light firefox -P work">
-        <property name="startup-notify" type="bool" value="true"/>
-      </property>
-      <property name="&lt;Shift&gt;&lt;Super&gt;p" type="string" value="env GTK_THEME=Adwaita:light firefox -P personal">
-        <property name="startup-notify" type="bool" value="true"/>
-      </property>
       <property name="F10" type="empty">
         <property name="startup-notify" type="bool" value="true"/>
       </property>
@@ -65,6 +59,13 @@
       <property name="&lt;Super&gt;t" type="string" value="toggle-tmux">
         <property name="startup-notify" type="bool" value="true"/>
       </property>
+      <property name="&lt;Shift&gt;&lt;Super&gt;p" type="string" value="env GTK_THEME=Adwaita:light firefox -P personal">
+        <property name="startup-notify" type="bool" value="true"/>
+      </property>
+      <property name="&lt;Shift&gt;&lt;Super&gt;f" type="string" value="env GTK_THEME=Adwaita:light firefox -P work">
+        <property name="startup-notify" type="bool" value="true"/>
+      </property>
+      <property name="&lt;Alt&gt;&lt;Super&gt;AudioPlay" type="string" value="audio-select-sink"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
@@ -186,6 +187,8 @@
       <property name="&lt;Super&gt;Up" type="string" value="tile_up_key"/>
       <property name="&lt;Super&gt;Down" type="string" value="tile_down_key"/>
       <property name="&lt;Super&gt;Return" type="string" value="maximize_window_key"/>
+      <property name="&lt;Alt&gt;&lt;Super&gt;5" type="string" value="move_window_workspace_5_key"/>
+      <property name="&lt;Super&gt;5" type="string" value="workspace_5_key"/>
     </property>
   </property>
   <property name="providers" type="array">
