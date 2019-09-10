@@ -4,7 +4,7 @@ set -u
 SCRIPT=`realpath $0`
 SCRIPTPATH=`dirname $SCRIPT`
 
-declare -a dependencies=("xdotool" "git" "zsh" "tmux" "vim")
+declare -a dependencies=("xdotool" "git" "zsh" "tmux" "vim" "rofi")
 echo "checking dependencies"
 for dep in "${!dependencies[@]}"; do
   dependency=${dependencies[$dep]}
@@ -32,6 +32,7 @@ declare -A symlinks=(
   ["npmrc"]=".npmrc"
   ["oh-my-zsh"]=".oh-my-zsh"
   ["Xmodmap"]=".Xmodmap"
+  ["audio-select-sink.sh"]=".local/bin/audio-select-sink"
   ["/usr/share/themes/Adwaita/gtk-2.0/"]="gtkrc-2.0"
 )
 echo "creating dotfile symlinks"
