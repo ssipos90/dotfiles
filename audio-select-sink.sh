@@ -28,6 +28,7 @@ fi
 
 # Get the index for the answer that the user wrote
 DESCRIPTION_INDEX=$(printf "$SINK_DESCRIPTIONS" | grep -n "$SINK_DESCRIPTION" | sed 's/:.*//')
+DESCRIPTION_INDEX=$(($DESCRIPTION_INDEX - 1))
 
 # Set the default sink
 pactl set-default-sink $DESCRIPTION_INDEX
