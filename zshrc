@@ -2,11 +2,11 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 source "$HOME/.dotfiles/paths"
 
-mkdir -p .zsh_hist
-HISTFILE=$HOME/.zsh_hist/global
-if [[ $TMUX_PANE ]]; then
-  HISTFILE=$HOME/.zsh_hist/tmux_${TMUX_PANE:1}
-fi
+#mkdir -p .zsh_hist
+#HISTFILE=$HOME/.zsh_hist/global
+#if [[ $TMUX_PANE ]]; then
+#  HISTFILE=$HOME/.zsh_hist/tmux_${TMUX_PANE:1}
+#fi
 
 # Path to your oh-my-zsh installation.
 export ZSH="${HOME}/.dotfiles/oh-my-zsh"
