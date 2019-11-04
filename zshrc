@@ -66,3 +66,5 @@ alias dc="docker-compose"
 
 export ANDROID_HOME="$HOME/.local/android/"
 
+
+export PATH=/home/ssipos/.local/bin:$PATH
