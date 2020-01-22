@@ -1,0 +1,5 @@
+resurrect
+plugins
+.tmp
+tmux-*.log
+  

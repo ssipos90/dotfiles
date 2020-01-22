@@ -1,0 +1,20 @@
+#!/bin/sh
+set -ux
+
+WHOAMI=$(whoami)
+HOSTNAME=$(hostname)
+
+WINDOW_TITLE="$WHOAMI@$HOSTNAME -- tmux"
+TMUX_WINDOW=$(xdotool search --name "$WINDOW_TITLE")
+
+TERMINAL_EMULATOR_CMD="xfce4-terminal --geometry=240x50+100+0 --title=\"$WINDOW_TITLE\" -e 'tmux -f $HOME/.tmux/tmux.conf'"
+
+if [ "$TMUX_WINDOW" = "" ]; then
+    eval $TERMINAL_EMULATOR_CMD &
+    kill $$
+fi
+
+ACTION=windowactivate
+
+exec xdotool $ACTION $TMUX_WINDOW --sync
+
