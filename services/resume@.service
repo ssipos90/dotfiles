@@ -6,7 +6,7 @@ After=suspend.target
 User=ssipos
 Type=simple
 Environment=DISPLAY=:0
-ExecStart=/usr/bin/bash /home/ssipos/.resume
+ExecStart=/usr/bin/bash /home/ssipos/.local/bin/resume
 
 [Install]
 WantedBy=suspend.target

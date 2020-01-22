@@ -4,7 +4,7 @@ set -u
 SCRIPT=`realpath $0`
 SCRIPTPATH=`dirname $SCRIPT`
 
-declare -a dependencies=("xdotool" "git" "zsh" "tmux" "vim" "rofi")
+declare -a dependencies=("xdotool" "git" "zsh" "tmux" "vim")
 echo "checking dependencies"
 for dep in "${!dependencies[@]}"; do
   dependency=${dependencies[$dep]}
@@ -18,21 +18,16 @@ done
 cd $SCRIPTPATH
 
 set -e
-echo "loading git submodules"
-git submodule update --init --recursive
-
 echo "adding paths to path"
 grep -Fxq "source $SCRIPTPATH/paths" $HOME/.profile || echo -e "source $SCRIPTPATH/paths\n\n$(cat $HOME/.profile)" > $HOME/.profile
 
 declare -A symlinks=(
-  ["zshrc"]=".zshrc"
-  ["gitconfig"]=".gitconfig"
-  ["tmux"]=".tmux"
+  ["confs/zshrc"]=".zshrc"
+  ["confs/gitconfig"]=".gitconfig"
+  ["tmux/tmux.conf"]=".tmux.conf"
   ["vim"]=".vim"
-  ["npmrc"]=".npmrc"
-  ["oh-my-zsh"]=".oh-my-zsh"
+  ["confs/npmrc"]=".npmrc"
   ["Xmodmap"]=".Xmodmap"
-  ["audio-select-sink.sh"]=".local/bin/audio-select-sink"
   ["/usr/share/themes/Adwaita/gtk-2.0/"]="gtkrc-2.0"
 )
 echo "creating dotfile symlinks"

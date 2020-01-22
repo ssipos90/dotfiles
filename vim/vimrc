@@ -14,7 +14,7 @@ set guioptions-=T "toolbar
 set guioptions-=r "scrollbar
 set nocompatible
 set path+=**
-set viminfo+=n~/.vim/.viminfo
+set viminfo+=n~/.dotfiles/vim/.viminfo
 set wildmenu
 set background=dark
 set tabstop=4
