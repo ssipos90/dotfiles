@@ -1,11 +1,12 @@
 [Unit]
 Description=Compositing manager
-After=xorg.target
+PartOf=graphical-session.target
+After=graphical-session.target
 
 [Service]
 ExecStart=/usr/bin/picom --backend glx --glx-no-stencil --vsync --shadow-exclude '! name~=""'
 Environment=DISPLAY=:0
 
 [Install]
-WantedBy=wm.target
+WantedBy=graphical-session.target
 

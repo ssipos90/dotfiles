@@ -1,0 +1,18 @@
+[Unit]
+
+Description=XScreenSaver Utility
+Documentation=man:xss-lock(1)
+PartOf=graphical-session.target
+After=graphical-session.target
+Before=xset-xss.service
+
+[Service]
+Type=simple
+ExecStart=/bin/xss-lock --transfer-sleep-lock -- i3lock --nofork
+Restart=always
+RestartSec=2
+Environment=DISPLAY=:0
+
+[Install]
+WantedBy=graphical-session.target
+
