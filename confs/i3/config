@@ -330,14 +330,16 @@ bar {
     #status_command i3status -c ~/.dotfiles/confs/i3/status
     status_command i3status
     position top
-
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
 #    tray_output primary
 #    tray_output eDP1
 
     bindsym button4 nop
     bindsym button5 nop
+    wheel_up_cmd nop
+    wheel_down_cmd nop
 #   font xft:URWGothic-Book 11
+    font pango:Fira Code, Font Awesome 5 Free 12
     strip_workspace_numbers yes
 
     colors {
