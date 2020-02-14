@@ -1,0 +1,4 @@
+#!/bin/bash
+
+tmux -f ~/.tmux/tmux.conf attach-session -t local || tmux -f ~/.tmux/tmux.conf new-session -t local
+
