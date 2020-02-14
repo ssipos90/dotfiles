@@ -5,7 +5,7 @@ WINDOW_TITLE="main-tmux"
 TMUX_WINDOW=$(xdotool search --name "$WINDOW_TITLE")
 
 if [ "$TMUX_WINDOW" = "" ]; then
-    xfce4-terminal --geometry="240x50+100+0" --title="$WINDOW_TITLE" --role="$WINDOW_TITLE" --command="attach-tmux" &
+    alacritty --class="$WINDOW_TITLE" --title="$WINDOW_TITLE" --command="attach-tmux" &
     kill $$
 fi
 
