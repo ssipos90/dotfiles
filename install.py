@@ -17,7 +17,7 @@ def generate_symlinks(symlinks, dst_dir = './'):
     except:
       print('Symlink already exists: %s' % dst, file=sys.stderr)
 
-dependencies = ['xdotool', 'git', 'zsh', 'tmux', 'vim', 'rofi']
+dependencies = ['xdotool', 'git', 'zsh', 'tmux', 'vim', 'rofi', 'alacritty']
 
 print('Checking dependencies')
 
@@ -46,7 +46,8 @@ generate_symlinks(dotfiles_map, home_dir)
 
 bins_map = {
         'bins/audio-select-sink.sh': '${HOME}/.local/bin/audio-select-sink',
-        'bins/resume.sh': '${HOME}/.local/bin/resume'
+        'bins/resume.sh': '${HOME}/.local/bin/resume',
+        '/usr/bin/alacritty': '${HOME}/.local/bin/x-terminal-emulator'
 }
 
 print('creating symlinks for dotfiles')
