@@ -173,7 +173,7 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 assign [class="firefox-work"]         $ws1
 assign [class="jetbrains-phpstorm"]   $ws2
 assign [class="code-oss"]             $ws2
-assign [window_role="main-tmux"]      $ws3
+assign [class="main-tmux"]            $ws3
 assign [class="beebeep"]              $ws4
 assign [class="TelegramDesktop"]      $ws4
 assign [class="auryo"]                $ws4
@@ -277,6 +277,7 @@ bindsym $mod+9 exec --no-startup-id blurlock
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id variety --next; sleep 1; picom -b
+exec --no-startup-id redshift-gtk
 exec --no-startup-id xmodmap
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
