@@ -227,19 +227,16 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # Set shut down, restart and locking features
-bindsym $mod+Shift+Delete exec --no-startup-id sleep 1 && blurlock
+bindsym $mod+Shift+Delete exec blurlock
 
 bindsym $mod+Delete mode "$mode_system"
-set $mode_system (l)ock, (Shift+e)xit, (Shift+r)eboot, (Shift+s)hutdown
+set $mode_system $mod + (l)ock, (e)xit, (r)eboot, (s)hutdown
 mode "$mode_system" {
-    #bindsym s exec --no-startup-id i3exit suspend, mode "default"
-    #bindsym u exec --no-startup-id i3exit switch_user, mode "default"
+    bindsym $mod+l exec --no-startup-id blurlock, mode "default"
     bindsym $mod+e exec --no-startup-id i3exit logout, mode "default"
-    #bindsym h exec --no-startup-id i3exit hibernate, mode "default"
     bindsym $mod+r exec --no-startup-id i3exit reboot, mode "default"
     bindsym $mod+s exec --no-startup-id i3exit shutdown, mode "default"
 
-    # exit system mode: "Enter" or "Escape"
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
@@ -321,7 +318,6 @@ set_from_resource $term_color13    color13
 set_from_resource $term_color14    color14
 set_from_resource $term_color15    color15
 
-# Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
     mode hide
     hidden_state hide
@@ -398,6 +394,7 @@ mode "$mode_gaps" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
+
 mode "$mode_gaps_inner" {
     bindsym plus  gaps inner current plus 5
     bindsym minus gaps inner current minus 5
@@ -410,6 +407,7 @@ mode "$mode_gaps_inner" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
+
 mode "$mode_gaps_outer" {
     bindsym plus  gaps outer current plus 5
     bindsym minus gaps outer current minus 5
