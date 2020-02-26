@@ -15,10 +15,10 @@ fi
 
 PATH="${PATH}:$HOME/.local/android/tools:$HOME/.local/android/build-tools:$HOME/.local/android/tools/bin:$HOME/.local/gradle/bin"
 
-ANDROID_HOME=$HOME/.local/android/
-ANDROID_SDK_ROOT=$HOME/.android/
+export ANDROID_HOME=$HOME/.local/android/
+export ANDROID_SDK_ROOT=$HOME/.android/
 
-STACK_ROOT=$HOME/.config/stack/
+export STACK_ROOT=$HOME/.config/stack/
 
 EDITOR=vim
 VISUAL=vim
