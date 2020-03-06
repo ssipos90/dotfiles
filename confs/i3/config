@@ -36,28 +36,21 @@ bindsym $mod+BackSpace kill
 bindsym $mod+d exec --no-startup-id rofi -show run
 bindsym $mod+f exec --no-startup-id rofi -show drun
 
-################################################################################################
-## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
-################################################################################################
-exec --no-startup-id start-pulseaudio-x11
 exec --no-startup-id pa-applet
-bindsym $mod+Ctrl+m exec pavucontrol
-
-################################################################################################
-
-# Screen brightness controls
-# Handled by Xfce4-power-manager
-# bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
-# bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
 
 # Start Applications
-bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
-bindsym $mod+F3 exec pcmanfm
-bindsym $mod+Shift+F3 exec pcmanfm_pkexec
-bindsym $mod+t exec --no-startup-id pkill picom
-bindsym $mod+Ctrl+t exec --no-startup-id picom -b
+bindsym $mod+Ctrl+b            exec terminal -e 'bmenu'
+bindsym $mod+F3                exec pcmanfm
+bindsym $mod+Shift+F3          exec pcmanfm_pkexec
+bindsym $mod+t                 exec pkill picom
+bindsym $mod+Ctrl+t            exec picom -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
-bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
+bindsym $mod+Ctrl+x  --release exec --no-startup-id xkill
+# Own apps
+bindsym $mod+Shift+p            exec pavucontrol -t 3
+bindsym $mod+Shift+u            exec firefox -P work     --class=firefox-work
+bindsym $mod+Shift+i            exec firefox -P personal --class=firefox-personal
+bindsym $mod+Shift+Return       exec start-tmux
 
 # Screenshot bindings
 bindsym Print exec --no-startup-id maim --format=png ~/Pictures/screenshot-$(date +%F-%H-%M-%S).png
@@ -169,18 +162,24 @@ bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 
 # Open applications on specific workspaces
+# ws1
 assign [class="firefox-work"]         $ws1
+
+# ws2
 assign [class="jetbrains-phpstorm"]   $ws2
 assign [class="code-oss"]             $ws2
+
+# ws3
 assign [class="main-tmux"]            $ws3
-assign [class="beebeep"]              $ws4
-assign [class="TelegramDesktop"]      $ws4
+
+# ws4
 assign [class="auryo"]                $ws4
+
+# ws5
+assign [class="beebeep"]              $ws5
+assign [class="TelegramDesktop"]      $ws5
 assign [class="firefox-personal"]     $ws5
 
-bindsym $mod+o exec firefox -P work     --class=firefox-work
-bindsym $mod+p exec firefox -P personal --class=firefox-personal
-bindsym $mod+Shift+Return exec start-tmux
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
@@ -268,16 +267,12 @@ mode "resize" {
 exec --no-startup-id xrandr --output DP1 --primary
 
 # Autostart applications
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id variety --next; sleep 1; picom -b
-exec --no-startup-id redshift-gtk
-exec --no-startup-id xmodmap
+exec --no-startup-id variety --next
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 exec --no-startup-id blueman-applet
-exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id sbxkb
