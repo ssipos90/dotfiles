@@ -3,8 +3,8 @@ default partial
 xkb_symbols "level3" {
    key  <LWIN> { [ ISO_Level3_Shift, ISO_Level3_Shift ] };
    key  <RWIN> { [ ISO_Level3_Lock, ISO_Level3_Lock ] };
-   # key  <TAB> { [ ISO_Level3_Shift, ISO_Level3_Shift ] };
-   # key <I252> { [ Tab,	ISO_Left_Tab ] };
+   #key  <TAB> { [ ISO_Level3_Shift, ISO_Level3_Shift ] };
+   #key <I252> { [ Tab,	ISO_Left_Tab ] };
 
     key <AC06> { [ h, H, Left , Left  ] };
     key <AC07> { [ j, J, Down , Down  ] };

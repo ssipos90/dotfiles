@@ -1,4 +1,4 @@
 #!/bin/bash
 
-/bin/bash .dotfiles/start-keyboard.sh
+/bin/bash .dotfiles/bin/start-keyboard.sh
 
