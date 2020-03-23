@@ -1,9 +1,9 @@
 [Unit]
-Description=Polkit Agent
+Description=Autorandr
 After=display-manager.service
 
 [Service]
-ExecStart=/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+ExecStart=/usr/bin/srandrd -n /usr/bin/autorandr --change --force --debug
 Restart=always
 
 [Install]

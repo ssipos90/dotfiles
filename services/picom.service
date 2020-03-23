@@ -1,6 +1,6 @@
 [Unit]
 Description=Picom Compositing manager
-After=graphical.target
+After=display-manager.service
 
 [Service]
 ExecStart=/usr/bin/picom

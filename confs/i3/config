@@ -43,7 +43,7 @@ bindsym $mod+Ctrl+b            exec terminal -e 'bmenu'
 bindsym $mod+F3                exec pcmanfm
 bindsym $mod+Shift+F3          exec pcmanfm_pkexec
 bindsym $mod+t                 exec pkill picom
-bindsym $mod+Ctrl+t            exec picom -b
+bindsym $mod+Ctrl+t            exec systemctl --user restart picom.service
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 bindsym $mod+Ctrl+x  --release exec --no-startup-id xkill
 # Own apps
@@ -53,10 +53,10 @@ bindsym $mod+Shift+i            exec firefox -P personal --class=firefox-persona
 bindsym $mod+Shift+Return       exec start-tmux
 
 # Screenshot bindings
-bindsym Print exec --no-startup-id maim --format=png ~/Pictures/screenshot-$(date +%F-%H-%M-%S).png
-bindsym Shift+Print exec --no-startup-id maim --format=png -w ~/Pictures/screenshot-$(date +%F-%H-%M-%S)-w.png
-bindsym $mod+Print --release exec --no-startup-id maim  --format=png | xclip -selection clipboard -t image/png -i
-bindsym $mod+Shift+Print --release exec --no-startup-id main --format=png -w | xclip -selection clipboard -t image/png -i
+bindsym Print exec --no-startup-id flameshot full -p ~/Pictures/
+bindsym Shift+Print exec --no-startup-id flameshot gui -p ~/Pictures/screenshot-$(date +%F-%H-%M-%S)-w.png
+bindsym $mod+Print --release exec --no-startup-id flameshot full -c
+bindsym $mod+Shift+Print --release exec --no-startup-id flameshot gui
 
 focus_follows_mouse no
 
@@ -180,7 +180,7 @@ assign [class="beebeep"]              $ws5
 assign [class="TelegramDesktop"]      $ws5
 assign [class="firefox-personal"]     $ws5
 
-
+for_window [class="code-oss"] exec xprop -id  -f _NET_WM_WINDOW_OPACITY 32c -set _NET_WM_WINDOW_OPACITY 0xdfffffaa
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
 for_window [class="calamares"] floating enable border normal
@@ -264,7 +264,7 @@ mode "resize" {
 }
 
 # set primary monitor
-exec --no-startup-id xrandr --output DP1 --primary
+#exec --no-startup-id xrandr --output DP1 --primary
 
 # Autostart applications
 exec --no-startup-id variety --next
