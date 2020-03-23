@@ -34,6 +34,7 @@ bindsym $mod+BackSpace kill
 
 # start program launcher
 bindsym $mod+d exec --no-startup-id rofi -show run
+bindsym $mod+Shift+d exec --no-startup-id start-layout
 bindsym $mod+f exec --no-startup-id rofi -show drun
 
 exec --no-startup-id pa-applet
@@ -44,7 +45,7 @@ bindsym $mod+F3                exec pcmanfm
 bindsym $mod+Shift+F3          exec pcmanfm_pkexec
 bindsym $mod+t                 exec pkill picom
 bindsym $mod+Ctrl+t            exec systemctl --user restart picom.service
-bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
+#bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 bindsym $mod+Ctrl+x  --release exec --no-startup-id xkill
 # Own apps
 bindsym $mod+Shift+p            exec pavucontrol -t 3

@@ -1,18 +1,18 @@
 default partial
 
 xkb_symbols "level3" {
-   key  <LWIN> { [ ISO_Level3_Shift, ISO_Level3_Shift ] };
-   key  <RWIN> { [ ISO_Level3_Lock, ISO_Level3_Lock ] };
-   #key  <TAB> { [ ISO_Level3_Shift, ISO_Level3_Shift ] };
-   #key <I252> { [ Tab,	ISO_Left_Tab ] };
+   key <LWIN> { [ ISO_Level3_Shift, ISO_Level3_Shift ] };
+   key <RWIN> { [ ISO_Level3_Lock, ISO_Level3_Lock ] };
+   key <TAB>  { [ ISO_Level3_Shift, ISO_Level3_Shift ] };
+   key <I252> { [ Tab,	ISO_Left_Tab ] };
 
-    key <AC06> { [ h, H, Left , Left  ] };
-    key <AC07> { [ j, J, Down , Down  ] };
-    key <AC08> { [ k, K, Up   , Up    ] };
-    key <AC09> { [ l, L, Right, Right ] };
+   key <AC06> { [ h, H, Left , Left  ] };
+   key <AC07> { [ j, J, Down , Down  ] };
+   key <AC08> { [ k, K, Up   , Up    ] };
+   key <AC09> { [ l, L, Right, Right ] };
 
-    key <AD07> { [ u, U, Prior , Prior  ] };
-    key <AD08> { [ i, I, Home  , Home   ] };
-    key <AD09> { [ o, O, End   , End    ] };
-    key <AD10> { [ p, P, Next  , Next   ] };
+   key <AD07> { [ u, U, Prior , Prior  ] };
+   key <AD08> { [ i, I, Home  , Home   ] };
+   key <AD09> { [ o, O, End   , End    ] };
+   key <AD10> { [ p, P, Next  , Next   ] };
 };
