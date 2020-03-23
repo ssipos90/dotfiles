@@ -1,11 +1,12 @@
 [Unit]
 Description=XAutolock
-After=display-manager.service
+After=xsession.target
 
 [Service]
 ExecStart=/usr/bin/xautolock -time 10 -notify 30 -notifier notify-send -locker /usr/bin/blurlock
 Restart=always
+RestartSec=5s
 
 [Install]
-WantedBy=user.target
+WantedBy=default.target
 

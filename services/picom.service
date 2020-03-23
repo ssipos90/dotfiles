@@ -1,11 +1,12 @@
 [Unit]
 Description=Picom Compositing manager
-After=display-manager.service
+After=xsession.target
 
 [Service]
 ExecStart=/usr/bin/picom
 Restart=always
+RestartSec=5s
 
 [Install]
-WantedBy=user.target
+WantedBy=default.target
 

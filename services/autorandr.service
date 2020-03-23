@@ -1,11 +1,12 @@
 [Unit]
 Description=Autorandr
-After=display-manager.service
+After=xsession.target
 
 [Service]
 ExecStart=/usr/bin/srandrd -n /usr/bin/autorandr --change --force --debug
 Restart=always
+RestartSec=5s
 
 [Install]
-WantedBy=user.target
+WantedBy=default.target
 

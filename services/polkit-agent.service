@@ -1,11 +1,12 @@
 [Unit]
 Description=Polkit Agent
-After=display-manager.service
+After=xsession.target
 
 [Service]
 ExecStart=/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 Restart=always
+RestartSec=5s
 
 [Install]
-WantedBy=user.target
+WantedBy=default.target
 
