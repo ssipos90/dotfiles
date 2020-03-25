@@ -1,0 +1,13 @@
+[Unit]
+Description=User resume actions
+After=network-online.target suspend.target hibernate.target hybrid-sleep.target
+
+[Service]
+Type=oneshot
+Environment=DISPLAY=:0
+ExecStart=/bin/sh sleep 1
+RemainAfterExit=true
+
+[Install]
+WantedBy=suspend.target
+
