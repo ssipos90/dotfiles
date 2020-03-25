@@ -1,3 +1,3 @@
-#!/bin/bash
+#!/bin/sh
 
-bash ~/.dotfiles/bin/start-keyboard.sh
+source ~/.dotfiles/bin/start-keyboard.sh

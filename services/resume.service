@@ -1,12 +1,12 @@
 [Unit]
 Description=User resume actions
-After=suspend.target
+After=suspend.target hibernate.target hybrid-sleep.target
 
 [Service]
-User=ssipos
-Type=simple
+Type=oneshot
 Environment=DISPLAY=:0
-ExecStart=/usr/bin/bash /home/ssipos/.local/bin/resume
+ExecStart=/bin/sh /home/ssipos/.local/bin/resume
+RemainAfterExit=true
 
 [Install]
 WantedBy=suspend.target
