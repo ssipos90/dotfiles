@@ -1,0 +1,48 @@
+// vim:ts=4:sw=4:et
+{
+    // tabbed split container with 2 children
+    "border": "pixel",
+    "floating": "auto_off",
+    "layout": "tabbed",
+    "percent": null,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 1,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 766,
+               "width": 1251,
+               "x": 1287,
+               "y": 15
+            },
+            "percent": 0.5,
+            "swallows": [
+               {
+                  "title": "^uvision\\-front"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "pixel",
+            "current_border_width": 1,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 1383,
+               "width": 825,
+               "x": 12,
+               "y": 15
+            },
+            "percent": 0.5,
+            "swallows": [
+               {
+                  "title": "^uvision\\-inv"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
