@@ -6,6 +6,8 @@ xkb_symbols "level3" {
    key <TAB>  { [ ISO_Level3_Shift, ISO_Level3_Shift ] };
    key <I252> { [ Tab,	ISO_Left_Tab ] };
 
+   key <BKSP> { [ BackSpace, BackSpace, Delete, Delete ] };
+
    key <AC06> { [ h, H, Left , Left  ] };
    key <AC07> { [ j, J, Down , Down  ] };
    key <AC08> { [ k, K, Up   , Up    ] };

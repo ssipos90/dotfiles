@@ -27,7 +27,7 @@ font xft:URWGothic-Book 12
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+BackSpace kill
@@ -35,23 +35,22 @@ bindsym $mod+BackSpace kill
 # start program launcher
 bindsym $mod+d exec --no-startup-id rofi -show run
 bindsym $mod+Shift+d exec --no-startup-id start-layout
-bindsym $mod+f exec --no-startup-id rofi -show drun
+bindsym $mod+f exec --no-startup-id "rofi -modi combi -show combi -combi-modi 'window,drun'"
 
-exec --no-startup-id pa-applet
 
 # Start Applications
-bindsym $mod+Ctrl+b            exec terminal -e 'bmenu'
-bindsym $mod+F3                exec pcmanfm
-bindsym $mod+Shift+F3          exec pcmanfm_pkexec
-bindsym $mod+t                 exec pkill picom
-bindsym $mod+Ctrl+t            exec systemctl --user restart picom.service
-#bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
+bindsym $mod+Ctrl+b            exec --no-startup-id terminal -e 'bmenu'
+bindsym $mod+F3                exec --no-startup-id pcmanfm
+bindsym $mod+Shift+F3          exec --no-startup-id pcmanfm_pkexec
+bindsym $mod+t                 exec --no-startup-id pkill picom
+bindsym $mod+Ctrl+t            exec --no-startup-id systemctl --user restart picom.service
+#bindsym $mod+Shift+d --release exec --no-startup-id "killall dunst; exec --no-startup-id notify-send 'restart dunst'"
 bindsym $mod+Ctrl+x  --release exec --no-startup-id xkill
 # Own apps
-bindsym $mod+Shift+p            exec pavucontrol -t 3
-bindsym $mod+Shift+u            exec firefox -P work     --class=firefox-work
-bindsym $mod+Shift+i            exec firefox -P personal --class=firefox-personal
-bindsym $mod+Shift+Return       exec start-tmux
+bindsym $mod+Shift+p            exec --no-startup-id pavucontrol -t 3
+bindsym $mod+Shift+u            exec --no-startup-id firefox -P work     --class=firefox-work
+bindsym $mod+Shift+i            exec --no-startup-id firefox -P personal --class=firefox-personal
+bindsym $mod+Shift+Return       exec --no-startup-id start-tmux
 
 # Screenshot bindings
 bindsym Print exec --no-startup-id flameshot full -p ~/Pictures/
@@ -91,9 +90,9 @@ bindsym $mod+Shift+Right move right
 #bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
 
 # split orientation
-bindsym $mod+b split h;exec notify-send 'tile horizontally'
-bindsym $mod+v split v;exec notify-send 'tile vertically'
-bindsym $mod+q split toggle;exec notify-send 'tile toggle'
+bindsym $mod+b split h;exec --no-startup-id notify-send 'tile horizontally'
+bindsym $mod+v split v;exec --no-startup-id notify-send 'tile vertically'
+bindsym $mod+q split toggle;exec --no-startup-id notify-send 'tile toggle'
 
 # toggle fullscreen mode for the focused container
 bindsym $mod+Shift+f fullscreen toggle
@@ -181,7 +180,6 @@ assign [class="beebeep"]              $ws5
 assign [class="TelegramDesktop"]      $ws5
 assign [class="firefox-personal"]     $ws5
 
-for_window [class="code-oss"] exec xprop -id  -f _NET_WM_WINDOW_OPACITY 32c -set _NET_WM_WINDOW_OPACITY 0xdfffffaa
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
 for_window [class="calamares"] floating enable border normal
@@ -210,7 +208,8 @@ for_window [class="Skype"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
-for_window [class="beebeep"] floating enable
+for_window [class="BeeBEEP"] floating enable
+for_window [class="Blueman-manager"] floating enable
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -222,12 +221,12 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # Set shut down, restart and locking features
-bindsym $mod+Shift+Delete exec blurlock
+bindsym $mod+Shift+Delete exec --no-startup-id blurlock
 
 bindsym $mod+Delete mode "$mode_system"
 set $mode_system $mod + (l)ock, (e)xit, (r)eboot, (s)hutdown
 mode "$mode_system" {
-    bindsym $mod+l exec --no-startup-id blurlock, mode "default"
+    bindsym $mod+l exec --no-startup-id blurlock -e, mode "default"
     bindsym $mod+e exec --no-startup-id i3exit logout, mode "default"
     bindsym $mod+r exec --no-startup-id i3exit reboot, mode "default"
     bindsym $mod+s exec --no-startup-id i3exit shutdown, mode "default"
