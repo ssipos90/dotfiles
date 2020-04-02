@@ -3,7 +3,7 @@ Description=XAutolock
 After=xsession.target
 
 [Service]
-ExecStart=/usr/bin/xautolock -time 10 -notify 30 -notifier notify-send -locker /usr/bin/blurlock -e
+ExecStart=/usr/bin/xautolock -time 10 -notify 30 -notifier notify-send -locker "/usr/bin/blurlock -e"
 Restart=always
 RestartSec=5s
 
