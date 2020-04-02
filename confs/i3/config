@@ -50,7 +50,8 @@ bindsym $mod+Ctrl+x  --release exec --no-startup-id xkill
 bindsym $mod+Shift+p            exec --no-startup-id pavucontrol -t 3
 bindsym $mod+Shift+u            exec --no-startup-id firefox -P work     --class=firefox-work
 bindsym $mod+Shift+i            exec --no-startup-id firefox -P personal --class=firefox-personal
-bindsym $mod+Shift+Return       exec --no-startup-id start-tmux
+#bindsym $mod+Shift+Return       exec --no-startup-id start-tmux
+bindsym $mod+Shift+m            exec --no-startup-id emacsclient -c
 
 # Screenshot bindings
 bindsym Print exec --no-startup-id flameshot full -p ~/Pictures/
@@ -204,7 +205,7 @@ for_window [class="qt5ct"] floating enable sticky enable border normal
 for_window [class="Qtconfig-qt4"] floating enable sticky enable border normal
 for_window [class="Simple-scan"] floating enable border normal
 for_window [class="(?i)System-config-printer.py"] floating enable border normal
-for_window [class="Skype"] floating enable border normal
+#for_window [class="Skype"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
@@ -273,6 +274,7 @@ exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 exec --no-startup-id blueman-applet
+#exec --no-startup-id pa-applet
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id sbxkb

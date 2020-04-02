@@ -39,3 +39,5 @@ export PATH="/home/ssipos/.local/bin:$PATH"
 alias ll="ls -laF"
 alias dc="docker-compose"
 alias fucking="sudo"
+alias vim="emacsclient -nw"
+
