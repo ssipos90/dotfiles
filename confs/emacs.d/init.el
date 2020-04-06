@@ -1,6 +1,7 @@
 (setq tls-checktrust t)
 (setq package-enable-at-startup nil)
 (setq inhibit-startup-screen t)
+(emacs-lock-mode -1)
 (set-face-attribute 'default nil :height 130)
 (menu-bar-mode -1)
 (toggle-scroll-bar -1)
@@ -23,7 +24,7 @@
     ("76c5b2592c62f6b48923c00f97f74bcb7ddb741618283bdb2be35f3c0e1030e3" default)))
  '(package-selected-packages
    (quote
-    (evil-magit magit paper-theme powerline-evil zenburn-theme markdown-mode use-package helm evil-visual-mark-mode))))
+    (js-mode pug-mode indium vue-mode js2-mode evil-magit magit zenburn-theme use-package helm evil-visual-mark-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -40,6 +41,9 @@
 (eval-when-compile
   (require 'use-package))
 
+(use-package helm
+  :ensure t)
+
 (use-package evil
   :ensure t)
 (evil-mode t)
@@ -49,6 +53,19 @@
   (lambda ()
     (interactive)
     (evil-delete (point-at-bol) (point))))
+
+;;; JS
+(use-package indium
+  :ensure t)
+
+(use-package pug-mode
+  :ensure t)
+
+(use-package js2-mode
+  :ensure t)
+
+(use-package vue-mode
+  :ensure t)
 
 ;;; Magit
 (use-package magit
