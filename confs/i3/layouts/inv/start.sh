@@ -15,15 +15,14 @@ i3-msg "\
 i3-msg "\
         workspace 2:  ; \
         append_layout ~/.i3/layouts/inv/2.json; \
-        exec pstorm ~/work/uvision/front; \
-        exec pstorm ~/work/uvision/inv; \
+        exec pstorm; \
         "
 
 i3-msg "\
         workspace 3:  ; \
         append_layout ~/.i3/layouts/inv/3.json; \
-        exec alacritty --title=\"Left - Alacritty\" --working-directory ~/work/uvision; \
-        exec alacritty --title=\"TopRight - Alacritty\" --working-directory ~/work/uvision/docker/dev; \
-        exec alacritty --title=\"BottomRight - Alacritty\" --working-directory ~/work/uvision; \
+        exec alacritty --title=\"Right - Alacritty\" --working-directory ~/work/uvision; \
+        exec alacritty --title=\"TopLeft - Alacritty\" --working-directory ~/work/uvision/docker/dev; \
+        exec alacritty --title=\"BottomLeft - Alacritty\" --working-directory ~/work/uvision; \
         "
 

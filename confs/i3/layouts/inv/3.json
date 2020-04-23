@@ -1,24 +1,4 @@
 // vim:ts=4:sw=4:et
-{
-    "border": "none",
-    "current_border_width": 1,
-    "floating": "auto_off",
-    "geometry": {
-       "height": 650,
-       "width": 867,
-       "x": 0,
-       "y": 0
-    },
-    "name": "Alacritty",
-    "percent": 0.5,
-    "swallows": [
-       {
-          "class": "^Alacritty$",
-          "title": "^Left - Alacritty$"
-       }
-    ],
-    "type": "con"
-}
 
 {
     // splitv split container with 2 children
@@ -43,7 +23,7 @@
             "swallows": [
                {
                    "class": "^Alacritty$",
-                   "title": "^TopRight - Alacritty$"
+                   "title": "^TopLeft - Alacritty$"
                }
             ],
             "type": "con"
@@ -63,7 +43,7 @@
             "swallows": [
                {
                    "class": "^Alacritty$",
-                   "title": "^BottomRight - Alacritty$"
+                   "title": "^BottomLeft - Alacritty$"
                }
             ],
             "type": "con"
@@ -71,3 +51,23 @@
     ]
 }
 
+{
+    "border": "none",
+    "current_border_width": 1,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 650,
+       "width": 867,
+       "x": 0,
+       "y": 0
+    },
+    "name": "Alacritty",
+    "percent": 0.5,
+    "swallows": [
+       {
+          "class": "^Alacritty$",
+          "title": "^Right - Alacritty$"
+       }
+    ],
+    "type": "con"
+}

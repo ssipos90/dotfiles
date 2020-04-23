@@ -1,0 +1,4 @@
+#!/bin/bash
+echo "starting kb" >> ~/log.txt
+source ~/.dotfiles/bin/start-keyboard.sh
+echo "started kb" >> ~/log.txt
