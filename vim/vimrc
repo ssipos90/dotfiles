@@ -18,6 +18,8 @@ set viminfo+=n~/.dotfiles/vim/.viminfo
 set wildmenu
 set background=dark
 set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 set expandtab
 set number relativenumber
 set hlsearch
@@ -43,16 +45,16 @@ let g:netrw_winsize = 25
 let g:slime_target = "tmux"
 let g:slime_paste_file = tempname()
 
-let g:hdevtools_stack=1
-let g:haskell_enable_quantification = 1   " to enable highlighting of `forall`
-let g:haskell_enable_recursivedo = 1      " to enable highlighting of `mdo` and `rec`
-let g:haskell_enable_arrowsyntax = 1      " to enable highlighting of `proc`
-let g:haskell_enable_pattern_synonyms = 1 " to enable highlighting of `pattern`
-let g:haskell_enable_typeroles = 1        " to enable highlighting of type roles
-let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
-let g:haskell_backpack = 1                " to enable highlighting of backpackkeywords
+"let g:hdevtools_stack=1
+"let g:haskell_enable_quantification = 1   " to enable highlighting of `forall`
+"let g:haskell_enable_recursivedo = 1      " to enable highlighting of `mdo` and `rec`
+"let g:haskell_enable_arrowsyntax = 1      " to enable highlighting of `proc`
+"let g:haskell_enable_pattern_synonyms = 1 " to enable highlighting of `pattern`
+"let g:haskell_enable_typeroles = 1        " to enable highlighting of type roles
+"let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
+"let g:haskell_backpack = 1                " to enable highlighting of backpackkeywords
 
-let g:hindent_on_save = 0
+"let g:hindent_on_save = 0
 
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -76,10 +78,10 @@ function! PackInit() abort
     call minpac#add('w0rp/ale')
     call minpac#add('yegappan/mru')
     call minpac#add('ConradIrwin/vim-bracketed-paste')
-    call minpac#add('neovimhaskell/haskell-vim')
+    "call minpac#add('neovimhaskell/haskell-vim')
     "call minpac#add('alx741/vim-hindent')
-    call minpac#add('bitc/vim-hdevtools')
-    call minpac#add('aiya000/vim-ghcid-quickfix')
+    "call minpac#add('bitc/vim-hdevtools')
+    "call minpac#add('aiya000/vim-ghcid-quickfix')
     call minpac#add('tpope/vim-scriptease')
 endfunction
 

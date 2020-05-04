@@ -1,23 +1,21 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-source "$HOME/.dotfiles/paths"
 
-#mkdir -p .zsh_hist
-#HISTFILE=$HOME/.zsh_hist/global
-#if [[ $TMUX_PANE ]]; then
-#  HISTFILE=$HOME/.zsh_hist/tmux_${TMUX_PANE:1}
-#fi
+if [[ -f "$HOME/.dotfiles/paths" ]]; then
+  source "$HOME/.dotfiles/paths"
+fi
 
 # Path to your oh-my-zsh installation.
-export ZSH="${HOME}/.dotfiles/oh-my-zsh"
+ZSH=/usr/share/oh-my-zsh
 
+#ZSH_THEME="robbyrussell"
 ZSH_THEME="ssipos"
 
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 CASE_SENSITIVE="true"
 # HYPHEN_INSENSITIVE="true"
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 # export UPDATE_ZSH_DAYS=13
 # DISABLE_LS_COLORS="true"
 # DISABLE_AUTO_TITLE="true"
@@ -27,14 +25,18 @@ CASE_SENSITIVE="true"
 
 # HIST_STAMPS="dd/mm/yyyy"
 
-plugins=(git-prompt tmux tmuxinator)
-
-source $ZSH/oh-my-zsh.sh
+plugins=(git-prompt tmux)
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
 export EDITOR='vim'
-export PATH="/home/ssipos/.local/bin:$PATH"
+
+ZSH_CACHE_DIR="$HOME/.cache/oh-my-zsh"
+if [[ ! -d $ZSH_CACHE_DIR ]]; then
+  mkdir $ZSH_CACHE_DIR
+fi
+
+source $ZSH/oh-my-zsh.sh
 
 alias ll="ls -laF"
 alias dc="docker-compose"
