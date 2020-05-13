@@ -52,8 +52,8 @@ bindsym $mod+Ctrl+t            exec --no-startup-id systemctl --user restart pic
 bindsym $mod+Ctrl+x  --release exec --no-startup-id xkill
 # Own apps
 bindsym $mod+Shift+p            exec --no-startup-id pavucontrol -t 3
-bindsym $mod+Shift+u            exec --no-startup-id firefox -P work     --class=firefox-work
-bindsym $mod+Shift+i            exec --no-startup-id firefox -P personal --class=firefox-personal
+bindsym $mod+Shift+u            exec --no-startup-id firefox-work
+bindsym $mod+Shift+i            exec --no-startup-id firefox-personal
 #bindsym $mod+Shift+Return       exec --no-startup-id start-tmux
 bindsym $mod+Shift+m            exec --no-startup-id emacsclient -c
 
