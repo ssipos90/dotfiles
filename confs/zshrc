@@ -42,6 +42,7 @@ alias ll="ls -laF"
 alias dc="docker-compose"
 alias fucking="sudo"
 alias em="emacsclient"
+alias ec="emacsclient"
 
 function dlog () {
    docker logs -f $(docker-compose ps -q $1 )
