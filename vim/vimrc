@@ -21,7 +21,7 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set expandtab
-set number relativenumber
+"set number relativenumber
 set hlsearch
 
 :augroup numbertoggle
@@ -30,7 +30,6 @@ set hlsearch
 :  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 :augroup END
 
-"hello world"
 "augroup ProjectDrawer
 "    autocmd!
 "    autocmd VimEnter * :Vexplore

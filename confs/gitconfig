@@ -7,3 +7,11 @@
 	editor = vim
 [alias]
 	tree = log --graph --decorate --pretty=oneline --abbrev-commit
+[merge]
+	tool = vimdiff
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[pull]
+	ff = only
