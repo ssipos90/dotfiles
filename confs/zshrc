@@ -45,6 +45,11 @@ alias em="emacsclient"
 alias ec="emacsclient"
 
 function dlog () {
-   docker logs -f $(docker-compose ps -q $1 )
+    CONTAINER_ID=$(docker-compose ps -q $1)
+    if [ $? -eq 0 ]; then
+        docker logs -f $CONTAINER_ID
+    else
+        >&2 echo "Error finding container."
+    fi
 }
 
