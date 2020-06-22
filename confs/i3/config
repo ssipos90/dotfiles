@@ -56,6 +56,7 @@ bindsym $mod+Shift+u            exec --no-startup-id firefox-work
 bindsym $mod+Shift+i            exec --no-startup-id firefox-personal
 #bindsym $mod+Shift+Return       exec --no-startup-id start-tmux
 bindsym $mod+Shift+m            exec --no-startup-id emacsclient -c
+bindsym $mod+Shift+o            exec --no-startup-id orage
 
 # Screenshot bindings
 bindsym Print exec --no-startup-id flameshot full -p ~/Pictures/
@@ -279,6 +280,7 @@ exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 exec --no-startup-id blueman-applet
 exec --no-startup-id pa-applet
+exec --no-startup-id beebeep
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id sbxkb

@@ -11,16 +11,10 @@
             "border": "pixel",
             "current_border_width": 1,
             "floating": "auto_off",
-            "geometry": {
-               "height": 766,
-               "width": 1251,
-               "x": 1287,
-               "y": 15
-            },
             "percent": 0.5,
             "swallows": [
                {
-                  "title": "^uvision\\-front"
+                  "class": "^code\\-oss$"
                }
             ],
             "type": "con"
@@ -29,16 +23,10 @@
             "border": "pixel",
             "current_border_width": 1,
             "floating": "auto_off",
-            "geometry": {
-               "height": 1383,
-               "width": 825,
-               "x": 12,
-               "y": 15
-            },
             "percent": 0.5,
             "swallows": [
                {
-                  "title": "^uvision\\-inv"
+                  "class": "^code\\-oss$"
                }
             ],
             "type": "con"
