@@ -61,7 +61,7 @@
     (evil-delete (point-at-bol) (point))))
 
 (unless (display-graphic-p)
-    (use-package evil-terminal-cursor-changer
+  (use-package evil-terminal-cursor-changer
     :ensure t
     :init
     (setq evil-motion-state-cursor 'box)  ; █
@@ -94,6 +94,10 @@
 (setq magit-auto-revert-mode nil)
 (global-set-key (kbd "C-c m s") 'magit-status)
 (global-set-key (kbd "C-c m l") 'magit-log)
+
+;;; Yaml
+(use-package yaml-mode
+  :ensure t)
 
 ;;; Theme
 (use-package twilight-theme
