@@ -1,6 +1,6 @@
 [Unit]
 Description=Autorandr
-After=xsession.target
+After=display-manager.service
 
 [Service]
 ExecStart=/usr/bin/srandrd -n /usr/bin/autorandr --change --force --debug

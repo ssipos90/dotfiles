@@ -1,7 +1,7 @@
 [Unit]
 Description=Start Xcape for Tab discoshit
 Documentation=man:xcape(1) https://github.com/alols/xcape
-After=graphical.target xsession.target
+After=graphical.target display-manager.service
 
 [Service]
 ExecStart=/usr/bin/xcape -d -e "ISO_Level3_Shift=Tab"
