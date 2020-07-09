@@ -5,21 +5,15 @@
     "border": "pixel",
     "floating": "auto_off",
     "layout": "splitv",
-    "percent": 0.5,
+    "percent": 0.3,
     "type": "con",
     "nodes": [
         {
             "border": "none",
             "current_border_width": 1,
             "floating": "auto_off",
-            "geometry": {
-               "height": 650,
-               "width": 867,
-               "x": 0,
-               "y": 0
-            },
             "name": "Alacritty",
-            "percent": 0.5,
+            "percent": 0.3,
             "swallows": [
                {
                    "class": "^Alacritty$",
@@ -32,14 +26,22 @@
             "border": "none",
             "current_border_width": 1,
             "floating": "auto_off",
-            "geometry": {
-               "height": 650,
-               "width": 867,
-               "x": 0,
-               "y": 0
-            },
             "name": "Alacritty",
-            "percent": 0.5,
+            "percent": 0.4,
+            "swallows": [
+               {
+                   "class": "^Alacritty$",
+                   "title": "^MiddleLeft - Alacritty$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "none",
+            "current_border_width": 1,
+            "floating": "auto_off",
+            "name": "Alacritty",
+            "percent": 0.3,
             "swallows": [
                {
                    "class": "^Alacritty$",
@@ -52,22 +54,53 @@
 }
 
 {
-    "border": "none",
-    "current_border_width": 1,
+    "border": "pixel",
     "floating": "auto_off",
-    "geometry": {
-       "height": 650,
-       "width": 867,
-       "x": 0,
-       "y": 0
-    },
-    "name": "Alacritty",
-    "percent": 0.5,
+    "layout": "splitv",
+    "percent": 0.4,
+    "type": "con",
     "swallows": [
        {
           "class": "^Alacritty$",
-          "title": "^Right - Alacritty$"
+          "title": "^Center - Alacritty$"
        }
-    ],
-    "type": "con"
+    ]
+}
+
+{
+    "border": "pixel",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "percent": 0.3,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "none",
+            "current_border_width": 1,
+            "floating": "auto_off",
+            "name": "Alacritty",
+            "percent": 0.5,
+            "swallows": [
+               {
+                  "class": "^Alacritty$",
+                  "title": "^TopRight - Alacritty$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "none",
+            "current_border_width": 1,
+            "floating": "auto_off",
+            "name": "Alacritty",
+            "percent": 0.5,
+            "swallows": [
+               {
+                  "class": "^Alacritty$",
+                  "title": "^BottomRight - Alacritty$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
 }

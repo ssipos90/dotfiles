@@ -27,9 +27,12 @@ function ws3 () {
   i3-msg "\
         workspace 3:  ; \
         append_layout ~/.i3/layouts/inv/3.json; \
-        exec alacritty --title=\"Right - Alacritty\" --working-directory ~/work/uvision; \
-        exec alacritty --title=\"TopLeft - Alacritty\" --working-directory ~/work/uvision/docker/dev; \
+        exec alacritty --title=\"MiddleLeft - Alacritty\" --working-directory ~/work/uvision; \
         exec alacritty --title=\"BottomLeft - Alacritty\" --working-directory ~/work/uvision; \
+        exec alacritty --title=\"Center - Alacritty\" --working-directory ~/work/uvision; \
+        exec alacritty --title=\"TopRight - Alacritty\" --working-directory ~/work/uvision; \
+        exec alacritty --title=\"BottomRight - Alacritty\" --working-directory ~/work/uvision; \
+        exec alacritty --title=\"TopLeft - Alacritty\" --working-directory ~/work/uvision/docker/dev; \
         "
 }
 
