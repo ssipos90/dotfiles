@@ -29,3 +29,18 @@ export EDITOR='vim'
 
 source $ZSH/oh-my-zsh.sh
 
+alias ll="ls -laF"
+alias dc="docker-compose"
+alias fucking="sudo"
+alias em="emacsclient"
+alias ec="emacsclient"
+
+function dlog () {
+  CONTAINER_ID=$(docker-compose ps -q $1)
+  if [ $? -eq 0 ]; then
+    docker logs -f $CONTAINER_ID
+  else
+    >&2 echo "Error finding container."
+  fi
+}
+

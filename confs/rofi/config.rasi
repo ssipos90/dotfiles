@@ -5,6 +5,8 @@
  * Copyright: PyGeek03
  ********************************************************************************/
 configuration {
+    drun-show-actions: true;
+    modi: "window,run,drun,combi,ssh";
     width: 30;
     lines: 10;
 }
@@ -146,3 +148,4 @@ configuration {
     margin:     0px 0.3em 0em 0em ;
     text-color: @normal-foreground;
 }
+
