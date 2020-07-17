@@ -13,8 +13,8 @@ xkb_symbols "level3" {
    key <AC08> { [ k, K, Up   , Up    ] };
    key <AC09> { [ l, L, Right, Right ] };
 
-   key <AD07> { [ u, U, Prior , Prior  ] };
-   key <AD08> { [ i, I, Home  , Home   ] };
-   key <AD09> { [ o, O, End   , End    ] };
-   key <AD10> { [ p, P, Next  , Next   ] };
+   key <AD07> { [ y, Y, Prior , Prior  ] };
+   key <AD08> { [ u, U, Home  , Home   ] };
+   key <AD09> { [ i, I, End   , End    ] };
+   key <AD10> { [ o, O, Next  , Next   ] };
 };
