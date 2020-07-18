@@ -2,19 +2,20 @@ default partial
 
 xkb_symbols "level3" {
    key <LWIN> { [ ISO_Level3_Shift, ISO_Level3_Shift ] };
-   key <RWIN> { [ ISO_Level3_Lock, ISO_Level3_Lock ] };
-   #key <TAB>  { [ ISO_Level3_Shift, ISO_Level3_Shift ] };
-   #key <I252> { [ Tab,	ISO_Left_Tab ] };
+   key <RWIN> { [ ISO_Level3_Lock,  ISO_Level3_Lock  ] };
+  #key <TAB>  { [ ISO_Level3_Shift, ISO_Level3_Shift ] };
+  #key <I252> { [ Tab,              ISO_Left_Tab     ] };
 
    key <BKSP> { [ BackSpace, BackSpace, Delete, Delete ] };
 
-   key <AC06> { [ h, H, Left , Left  ] };
-   key <AC07> { [ j, J, Down , Down  ] };
-   key <AC08> { [ k, K, Up   , Up    ] };
+   key <AC06> { [ h, H, Left,  Left  ] };
+   key <AC07> { [ j, J, Down,  Down  ] };
+   key <AC08> { [ k, K, Up,    Up    ] };
    key <AC09> { [ l, L, Right, Right ] };
 
-   key <AD07> { [ y, Y, Prior , Prior  ] };
-   key <AD08> { [ u, U, Home  , Home   ] };
-   key <AD09> { [ i, I, End   , End    ] };
-   key <AD10> { [ o, O, Next  , Next   ] };
+   key <AD06> { [ y, Y, Prior, Prior ] };
+   key <AD07> { [ u, U, Home,  Home  ] };
+   key <AD08> { [ i, I, End,   End   ] };
+   key <AD09> { [ o, O, Next,  Next  ] };
 };
+
