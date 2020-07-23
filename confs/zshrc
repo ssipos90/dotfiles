@@ -30,6 +30,7 @@ export EDITOR='vim'
 source $ZSH/oh-my-zsh.sh
 
 alias ll="ls -laF"
+alias lA="ls -A1"
 alias dc="docker-compose"
 alias fucking="sudo"
 alias em="emacsclient"

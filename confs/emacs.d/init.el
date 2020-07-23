@@ -33,7 +33,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-
+(setq x-select-enable-clipboard t)
 (defun on-after-init ()
   (unless (display-graphic-p)
     (set-face-background 'default "unspecified-bg" (selected-frame))))
