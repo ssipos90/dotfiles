@@ -1,5 +1,3 @@
-
-
 [user]
 	name = Sebastian Sipos
 	email = sebastiansipos90@gmail.com
@@ -7,8 +5,10 @@
 	editor = vim
 [alias]
 	tree = log --graph --decorate --pretty=oneline --abbrev-commit
+	root = rev-parse --show-toplevel
 [merge]
-	tool = vimdiff
+    tool = vimdiff
+    conflictstyle = diff3
 [diff]
 	tool = vimdiff
 [difftool]
