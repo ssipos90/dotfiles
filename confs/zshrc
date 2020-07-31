@@ -36,8 +36,15 @@ alias fucking="sudo"
 alias em="emacsclient"
 alias ec="emacsclient"
 
+function cdroot () {
+  local ROOTDIR=$(git root)
+  if [ $? -eq 0 ]; then
+    cd $ROOTDIR/$1
+  fi
+}
+
 function dlog () {
-  CONTAINER_ID=$(docker-compose ps -q $1)
+  local CONTAINER_ID=$(docker-compose ps -q $1)
   if [ $? -eq 0 ]; then
     docker logs -f $CONTAINER_ID
   else
