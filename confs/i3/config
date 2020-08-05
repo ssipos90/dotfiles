@@ -252,9 +252,6 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 
-# set primary monitor
-#exec --no-startup-id xrandr --output DP1 --primary
-
 # Autostart applications
 exec --no-startup-id variety --next
 exec --no-startup-id nm-applet
@@ -307,9 +304,8 @@ bar {
     i3bar_command i3bar
     status_command i3status -c ~/.i3/status
     position top
-    # please set your primary output first. Example: 'xrandr --output eDP1 --primary'
+
     tray_output primary
-    # tray_output eDP1
 
     bindsym button4 nop
     bindsym button5 nop
