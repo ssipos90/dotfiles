@@ -1,22 +1,26 @@
 LOCAL_BIN="$HOME/.local/bin"
-if [[ -d "${LOCAL_BIN}" ]]; then
+if [ -d "${LOCAL_BIN}" ]; then
     PATH="${LOCAL_BIN}:${PATH}"
 fi
 
 NPM_BIN=${HOME}/.config/npm/bin
-if [[ -d "${NPM_BIN}" ]]; then
+if [ -d "${NPM_BIN}" ]; then
     PATH="${NPM_BIN}:${PATH}"
 fi
 
 COMPOSER_BIN=${HOME}/.config/composer/vendor/bin
-if [[ -d $COMPOSER_BIN ]]; then
+if [ -d $COMPOSER_BIN ]; then
     PATH="${PATH}:${COMPOSER_BIN}"
 fi
 
-PATH="${PATH}:$HOME/.local/android/tools:$HOME/.local/android/build-tools:$HOME/.local/android/tools/bin:$HOME/.local/gradle/bin"
+ANDROID_HOME=$HOME/.local/android/
+ANDROID_SDK_ROOT=$HOME/.android/
+if [ -d $ANDROID_HOME ]; then
+    export ANDROID_HOME
+    export ANDROID_SDK_ROOT
+    PATH="${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/build-tools:$ANDROID_HOME/tools/bin:$HOME/.local/gradle/bin"
+fi
 
-export ANDROID_HOME=$HOME/.local/android/
-export ANDROID_SDK_ROOT=$HOME/.android/
 
 export STACK_ROOT=$HOME/.config/stack/
 
