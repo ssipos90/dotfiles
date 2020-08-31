@@ -387,7 +387,7 @@ debug:
 scrolling:
   # Maximum number of lines in the scrollback buffer.
   # Specifying '0' will disable scrolling.
-  history: 9999
+  history: 99999
 
   # Number of lines the viewport will move for every line scrolled when
   # scrollback is enabled (history > 0).
